@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WAMS Pro Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>🚀 WAMS Pro</h2>
+  <button onclick="showView('admin')">📊 Dashboard</button>
+  <button onclick="showView('dealer')">🛒 Dealer</button>
+  <button onclick="showView('supplier')">🏭 Supplier</button>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- DASHBOARD -->
+  <section id="admin-view" class="view">
+
+    <h1>Dashboard</h1>
+
+    <!-- Stats Cards -->
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Total Products</h3>
+        <p id="total-products">0</p>
+      </div>
+
+      <div class="stat-card red">
+        <h3>Low Stock</h3>
+        <p id="low-stock-count">0</p>
+      </div>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="card">
+      <h2>Inventory</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Stock</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- DEALER -->
+  <section id="dealer-view" class="view hidden">
+    <div class="card">
+      <h1>Dealer Panel</h1>
+
+      <div class="form-box">
+        <input id="pid" placeholder="Product ID">
+        <input id="qty" type="number" placeholder="Quantity">
+        <button class="btn primary" onclick="placeOrder()">Place Order</button>
+      </div>
+
+      <p id="msg"></p>
+    </div>
+  </section>
+
+  <!-- SUPPLIER -->
+  <section id="supplier-view" class="view hidden">
+    <div class="card">
+      <h1>Supplier Panel</h1>
+
+      <div class="form-box">
+        <input id="sup-pid" placeholder="Product ID">
+        <input id="sup-qty" type="number" placeholder="Quantity">
+        <button class="btn primary" onclick="requestQuote()">Get Quote</button>
+        <button class="btn success" onclick="addStock()">Add Stock</button>
+      </div>
+
+      <p id="supplier-msg"></p>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

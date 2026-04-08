@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Engine",
+      "price": 5000,
+      "stock": 10
+    },
+    {
+      "id": "P002",
+      "name": "Chassis",
+      "price": 3000,
+      "stock": 3
+    }
+  ],
+  "orders": [],
+  "suppliers": [
+    {
+      "id": "SUP1775574205671",
+      "productId": "P003",
+      "quantity": "43",
+      "quotation": "2300",
+      "status": "Quoted"
+    },
+    {
+      "id": "SUP1775574242046",
+      "productId": "P002",
+      "quantity": "444",
+      "quotation": null,
+      "status": "Pending"
+    },
+    {
+      "id": "SUP1775574925514",
+      "productId": "",
+      "quantity": "",
+      "quotation": null,
+      "status": "Pending"
+    },
+    {
+      "id": "SUP1775574930442",
+      "productId": "",
+      "quantity": "",
+      "quotation": null,
+      "status": "Pending"
+    },
+    {
+      "id": "SUP1775575141968",
+      "productId": "",
+      "quantity": "",
+      "quotation": null,
+      "status": "Pending"
+    }
+  ]
+}
